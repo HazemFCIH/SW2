@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('fciflix.home');
 });
+Route::get('/movie', function () {
+    return view('fciflix.movie');
+});
 
 Auth::routes();
 
@@ -30,3 +33,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::resource('/','CategoryController');
+
+//Route::get('/movie/{id}'.'MovieController@viewMovie');

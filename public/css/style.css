@@ -329,8 +329,8 @@ ul.dropdown-menu.multi-column ul li a:hover {
 .cd-header-buttons {
 	position: absolute;
 	display: inline-block;
-	top: -55px;
-	right: 0;
+	top: -79px;
+	right: -30px;
 }
 
 .cd-header-buttons li {
