@@ -16,7 +16,9 @@ class CategoryController extends Controller
         $catdata= category::latest()->paginate(5);
         return $catdata;
     }
-
+public function add_category(){
+        return view('admin.add_category');
+    }
     /**
      * Show the form for creating a new resource.
      *

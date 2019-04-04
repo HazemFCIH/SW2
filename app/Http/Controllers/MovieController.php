@@ -16,6 +16,15 @@ class MovieController extends Controller
     {
         
     }
+    public function dashboard(){
+
+        return view('admin.dashboard');
+
+    }
+
+     public function add_movies(){
+        return view('admin.add-movie');
+    }
 
     /**
      * Show the form for creating a new resource.
