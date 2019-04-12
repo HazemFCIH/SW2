@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\CategoryController;
+
+?>
 <html>
 <head>
 <title>Movies Pro an Entertainment Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
@@ -54,38 +59,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Genre <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<li>
-									<div class="col-sm-4">
+                                         <?php
+                       		 $catdata=CategoryController::index() ?>
+                                        @foreach($catdata as $row)
+									<div class="col-sm-12">
 										<ul class="multi-column-dropdown">
-											<li><a href="#">Action</a></li>
-											<li><a href="#">Biography</a></li>
-											<li><a href="#">Crime</a></li>
-											<li><a href="#">Family</a></li>
-											<li><a href="#">Horror</a></li>
-											<li><a href="#">Romance</a></li>
-											<li><a href="#">Sports</a></li>
-											<li><a href="#">War</a></li>
+											<li><a href="{{ route('home') }}#{{$row->id}}">{{$row->cat_name}}</a></li>
+
 										</ul>
 									</div>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="#">Adventure</a></li>
-											<li><a href="#">Comedy</a></li>
-											<li><a href="#">Documentary</a></li>
-											<li><a href="#">Fantasy</a></li>
-											<li><a href="#">Thriller</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="#">Animation</a></li>
-											<li><a href="#">Costume</a></li>
-											<li><a href="#">Drama</a></li>
-											<li><a href="#">History</a></li>
-											<li><a href="#">Musical</a></li>
-											<li><a href="#">Psychological</a></li>
-										</ul>
-									</div>
+
 									<div class="clearfix"></div>
+                                        @endforeach
 									</li>
 								</ul>
 							</li>
