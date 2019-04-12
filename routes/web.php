@@ -59,6 +59,9 @@ Route::post('/admin/dashboard/add_category','AdminController@insert_category');
 Route::get('/admin/dashboard/add_movies','MovieController@add_movies');
 
 Route::post('/admin/dashboard/add_movies','MovieController@insert_movies');
+Route::get('store', 'CategoryController@store')->name("Category.store");
+Route::post('store', 'CategoryController@store')->name("Category.store");
+
 /*Route::get('admin', function () {
     return redirect('admin/dashboard');
 });*/

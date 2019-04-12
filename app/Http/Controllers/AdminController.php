@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\create_categories;
+use App\category;
 
 class AdminController extends Controller
 {
@@ -13,7 +13,7 @@ class AdminController extends Controller
 
     }
 
-    public function insert_category()
+   /*public function insert_category()
     {
         create_categories::create ([
 
@@ -25,10 +25,10 @@ class AdminController extends Controller
         ]);
 
         return back();
-    }
-
+    }*/
+}
     /*public function add_categories ()
     {
         return view('add_category');
     }*/
-}
+

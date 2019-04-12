@@ -25,8 +25,8 @@ public function add_category(){
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+{
+        return view('admin/add_category');
     }
 
     /**
@@ -37,8 +37,19 @@ public function add_category(){
      */
     public function store(Request $request)
     {
-        //
+       $request->validate([
+           'cat_name' => 'required',
+           'cat_des' => 'required'
+
+       ]);
+        $form_data=array(
+        'cat_name' => $request->cat_name,
+        'cat_des'  => $request->cat_des
+        );
+        Category::create($form_data);
+        return redirect('add_category')->with('success','Data Added successfully.');
     }
+
 
     /**
      * Display the specified resource.
