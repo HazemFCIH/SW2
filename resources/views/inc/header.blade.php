@@ -17,13 +17,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for-mobile-apps -->
 <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
 <!-- pop-up -->
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url('css/popuo-box.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!-- //pop-up -->
-<link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
-<link rel="stylesheet" type="text/css" href="css/zoomslider.css" />
+<link href="{{ url('css/easy-responsive-tabs.css')}}" rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" type="text/css" href="{{ url('css/zoomslider.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+<link href="{{ url('css/font-awesome.css') }}" rel="stylesheet">
+<script type="text/javascript" src="{{ url('js/modernizr-2.6.2.min.js')}}"></script>
 <!--/web-fonts-->
 <link href='//fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
 <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900" rel="stylesheet">
@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <body>
 <!--/main-header-->
   <!--/banner-section-->
-	<div id="demo-1" data-zs-src='["images/2.jpg", "images/1.jpg", "images/3.jpg","images/4.jpg"]' data-zs-overlay="dots">
+	<div id="demo-1" data-zs-src='["{{ url('images/2.jpg')}}", "{{ url('images/1.jpg')}}", "{{ url('images/3.jpg')}}","{{ url('images/4.jpg')}}"]' data-zs-overlay="dots">
 		<div class="demo-inner-content">
 		<!--/header-w3l-->
 			   <div class="header-w3-agileits" id="home">
@@ -300,12 +300,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </form>
 										</div>
 									</div>
-								</div>
+                            </div>
 							</div>
 						</div>
 				<!-- //Modal1 -->
-        
-<script src="js/jquery-1.11.1.min.js"></script>
+
+<script src="{{ url('js/jquery-1.11.1.min.js')}}"></script>
 	<!-- Dropdown-Menu-JavaScript -->
 			<script>
 				$(document).ready(function(){
@@ -324,10 +324,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- //Dropdown-Menu-JavaScript -->
 
 
-<script type="text/javascript" src="js/jquery.zoomslider.min.js"></script>
+<script type="text/javascript" src="{{ url('js/jquery.zoomslider.min.js')}}"></script>
 		<!-- search-jQuery -->
-				<script src="js/main.js"></script>
-			<script src="js/simplePlayer.js"></script>
+				<script src="{{ url('js/main.js')}}"></script>
+			<script src="{{ url('js/simplePlayer.js')}}"></script>
 			<script>
 				$("document").ready(function() {
 					$("#video").simplePlayer();
@@ -350,7 +350,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</script>
 
 			<!-- pop-up-box -->  
-		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script src="{{ url('js/jquery.magnific-popup.js')}}" type="text/javascript"></script>
 	<!--//pop-up-box -->
 
 			<div id="small-dialog1" class="mfp-hide">
@@ -375,7 +375,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																		
 		});
 	</script>
-<script src="js/easy-responsive-tabs.js"></script>
+<script src="{{ url('js/easy-responsive-tabs.js')}}"></script>
 <script>
 $(document).ready(function () {
 $('#horizontalTab').easyResponsiveTabs({
@@ -398,8 +398,8 @@ fit: true
 });
 });
 </script>
-<link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/owl.carousel.js"></script>
+<link href="{{ url('css/owl.carousel.css')}}" rel="stylesheet" type="text/css" media="all">
+<script src="{{ url('js/owl.carousel.js')}}"></script>
 <script>
 	$(document).ready(function() { 
 		$(".owl-demo").owlCarousel({
@@ -420,8 +420,8 @@ fit: true
 </script> 
 
 <!--/script-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="{{ url('js/move-top.js')}}"></script>
+<script type="text/javascript" src="{{ url('js/easing.js')}}"></script>
 
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -447,4 +447,4 @@ fit: true
 						});
 					</script>
 <!--end-smooth-scrolling-->
-	<script src="js/bootstrap.js"></script>
+	<script src="{{ url('js/bootstrap.js')}}"></script>

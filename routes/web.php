@@ -48,7 +48,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::resource('/','CategoryController');
 
-//Route::get('/movie/{id}'.'MovieController@viewMovie');
+Route::get('/movie/{id}','MovieController@viewMovie')->name("Movie.viewMovie");
 Route::get('/admin','AdminController@dashboard');
 
 Route::get('/admin/dashboard/add_category','AdminController@add_movies');
@@ -61,6 +61,8 @@ Route::get('/admin/dashboard/add_movies','MovieController@add_movies');
 Route::post('/admin/dashboard/add_movies','MovieController@insert_movies');
 Route::get('store', 'CategoryController@store')->name("Category.store");
 Route::post('store', 'CategoryController@store')->name("Category.store");
+Route::get('store', 'MovieController@store')->name("Movie.store");
+Route::post('store', 'MovieController@store')->name("Movie.store");
 
 /*Route::get('admin', function () {
     return redirect('admin/dashboard');

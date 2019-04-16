@@ -14,7 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        
+     return view('fciflix.movie');
     }
     public function dashboard(){
 
@@ -39,9 +39,9 @@ class MovieController extends Controller
         $movies = DB::table('movie')->where('cat_id', '=',$id)->get();
         return $movies;
     }
-    public static function viewMovie($id){
+    public static function viewMovie( $id){
       $movies = DB::table('movie')->where('id', '=',$id)->get();
-        return $movies;   
+        return view('fciflix.movie',['movies' => $movies]);
     }
 
     /**
@@ -52,7 +52,25 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'mov_name'    => 'required',
+            'img_path'    => 'required|image|max:2048',
+            'cat_id'      => 'required',
+            'source_path' => 'required'
+
+        ]);
+        $img_path = $request->file('img_path');
+        $new_name = rand().'.'.$img_path->
+            getClientOriginalExtension();
+        $img_path->move(public_path('images'),$new_name);
+        $form_data=array(
+            'mov_name' => $request->mov_name,
+            'img_path' => $new_name,
+            'cat_id' => $request->cat_id,
+            'source_path'=>$request->source_path
+        );
+        Movie::create($form_data);
+        return redirect('add-movie')->with('success','Data Added successfully.');
     }
 
     /**

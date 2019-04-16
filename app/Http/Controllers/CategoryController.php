@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\category;
+use DB;
 class CategoryController extends Controller
 {
     /**
@@ -13,11 +14,16 @@ class CategoryController extends Controller
      */
     public static function index()
     {
-        $catdata= category::latest()->paginate(5);
+        $catdata = DB::table('category')->get();
         return $catdata;
     }
 public function add_category(){
         return view('admin.add_category');
+    }
+    public static function ListCategory(){
+
+        $catdata = DB::table('category')->get();
+        return $catdata;
     }
     /**
      * Show the form for creating a new resource.
