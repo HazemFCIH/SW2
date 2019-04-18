@@ -8,16 +8,15 @@
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Categories</span> <span class="label label-important">2</span></a>
       <ul>
         <li><a href="{{route('add_category')}}">Add Category</a></li>
-        <li><a href="form-validation.html">Dellete Category</a></li>
-        <li><a href="form-validation.html">Edit Category</a></li>
+        <li><a href="{{route('list_category')}}">list Categories</a></li>
+
 
       </ul>
 
     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Movies</span> <span class="label label-important">2</span></a>
       <ul>
         <li><a href="{{route('add-movie')}}">Add Movie</a></li>
-        <li><a href="form-validation.html">Dellete Movie</a></li>
-        <li><a href="form-validation.html">Edit Movie</a></li>
+        <li><a href="{{route('list_movie')}}">List Movie</a></li>
 
       </ul>
     </li>

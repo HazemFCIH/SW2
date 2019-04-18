@@ -25,7 +25,10 @@ Route::get('/dashboard', function () {
 //Route::get('add-movie', ['as' => 'add-movie', 'uses' => 'MovieController@add_movies']);
 Route::get('/add-movie', 'MovieController@add_movies')->name('add-movie');
 Route::get('/add_category', 'CategoryController@add_category')->name('add_category');
-
+Route::get('/list_category','CategoryController@list_category_p')->name('list_category');
+Route::get('/list_movie', 'MovieController@list_movie')->name('list_movie');
+Route::get('/edit_category/{id}','CategoryController@edit_category')->name('edit_category');
+Route::get('/edit_movie/{id}', 'MovieController@edit_movie')->name('edit_movie');
 
 Route::get('/movie', function () {
     return view('fciflix.movie');
@@ -51,19 +54,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/movie/{id}','MovieController@viewMovie')->name("Movie.viewMovie");
 Route::get('/admin','AdminController@dashboard');
 
-Route::get('/admin/dashboard/add_category','AdminController@add_movies');
 
-Route::post('/admin/dashboard/add_category','AdminController@insert_category');
-
-
-Route::get('/admin/dashboard/add_movies','MovieController@add_movies');
-
-Route::post('/admin/dashboard/add_movies','MovieController@insert_movies');
-Route::get('store', 'CategoryController@store')->name("Category.store");
-Route::post('store', 'CategoryController@store')->name("Category.store");
-Route::get('store', 'MovieController@store')->name("Movie.store");
-Route::post('store', 'MovieController@store')->name("Movie.store");
-
+Route::get('storeM', 'MovieController@store')->name("Movie.storeM");
+Route::post('storeM', 'MovieController@store')->name("Movie.storeM");
+Route::get('store','CategoryController@store')->name("Category.store");
+Route::post('store','CategoryController@store')->name("Category.store");
+Route::post('edit_category','CategoryController@edit_category')->name("Category.edit_category");
 /*Route::get('admin', function () {
     return redirect('admin/dashboard');
 });*/

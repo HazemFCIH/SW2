@@ -29,7 +29,7 @@ use App\Http\Controllers\MovieController;
     </ul>
 </div>
 @endif
- <form class="form-horizontal" method="post" action="{{ route('Movie.store') }}" name="basic_validate" id="basic_validate" novalidate="novalidate" enctype="multipart/form-data">
+ <form class="form-horizontal" method="post" action="{{ route('Movie.storeM') }}" name="basic_validate" id="basic_validate" novalidate="novalidate" enctype="multipart/form-data">
     @csrf
         <div class="control-group">
                 <label class="control-label" > Moive Name</label>

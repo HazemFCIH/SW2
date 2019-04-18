@@ -20,6 +20,17 @@ class CategoryController extends Controller
 public function add_category(){
         return view('admin.add_category');
     }
+    public function edit_category($id){
+        $data=Category::findOrFail($id);
+        return view('admin.edit_category',compact('data'));
+    }
+
+
+    public function list_category_p(){
+        $data=DB::table('category')->get();
+        return view('admin.list_category',compact('data'))
+            ->with('i',(request()->input('page',1)-1)*5);
+    }
     public static function ListCategory(){
 
         $catdata = DB::table('category')->get();

@@ -25,7 +25,14 @@ class MovieController extends Controller
      public function add_movies(){
         return view('admin.add-movie');
     }
-
+    public function edit_movie(){
+        return view('admin.edit_movie');
+    }
+   public function list_movie(){
+          $data=DB::table('movie')->get();
+        return view('admin.list_movie',compact('data'))
+            ->with('i',(request()->input('page',1)-1)*5);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -50,7 +57,7 @@ class MovieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeM(Request $request)
     {
         $request->validate([
             'mov_name'    => 'required',
