@@ -25,8 +25,9 @@ class MovieController extends Controller
      public function add_movies(){
         return view('admin.add-movie');
     }
-    public function edit_movie(){
-        return view('admin.edit_movie');
+    public function edit_movie($id){
+      $data=Movie::findOrFail($id);
+        return view('admin.edit_Movie',compact('data'));
     }
    public function list_movie(){
           $data=DB::table('movie')->get();
@@ -109,7 +110,7 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateM(Request $request, $id)
     {
         //
     }

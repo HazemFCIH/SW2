@@ -33,7 +33,7 @@
         <td>{{$row->cat_id}}</td>
         <td><img src="{{URL::to('/')}}/images/{{$row->img_path}}" class="img-thumbnail" width="75"></td>
         <td><a href="{{$row->source_path}}" target="_blank">{{$row->mov_name}}</a></td>
-
+<td><a href="{{route('edit_movie', $row->id)}}" class="btn btn-warning">Edit</a></td>
 
         </tr>
 

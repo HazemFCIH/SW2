@@ -19,10 +19,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
-/*Route::get('/add-movie', function () {
-    return view('admin.add-movie');
-});*/
-//Route::get('add-movie', ['as' => 'add-movie', 'uses' => 'MovieController@add_movies']);
+
 Route::get('/add-movie', 'MovieController@add_movies')->name('add-movie');
 Route::get('/add_category', 'CategoryController@add_category')->name('add_category');
 Route::get('/list_category','CategoryController@list_category_p')->name('list_category');
@@ -59,7 +56,15 @@ Route::get('storeM', 'MovieController@store')->name("Movie.storeM");
 Route::post('storeM', 'MovieController@store')->name("Movie.storeM");
 Route::get('store','CategoryController@store')->name("Category.store");
 Route::post('store','CategoryController@store')->name("Category.store");
-Route::post('edit_category','CategoryController@edit_category')->name("Category.edit_category");
-/*Route::get('admin', function () {
+Route::get('update','CategoryController@update')->name("Category.update");
+Route::post('update','CategoryController@update')->name("Category.update");
+Route::patch('/edit_category/{id}', 'CategoryController@update')->name('Category.update');
+Route::get('updateM','MovieController@updateM')->name("Movie.updateM");
+Route::post('updateM','MovieController@updateM')->name("Movie.updateM");
+Route::patch('/edit_Movie/{id}', 'MovieController@updateM')->name('Movie.updateM');
+
+//Route::resource('category', 'CategoryController');
+
+/*Route::get('admin', functiMon () {
     return redirect('admin/dashboard');
 });*/

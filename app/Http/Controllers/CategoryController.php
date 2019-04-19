@@ -99,7 +99,17 @@ public function add_category(){
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+           'cat_name' => 'required',
+           'cat_des' => 'required'
+
+       ]);
+        $form_data=array(
+        'cat_name' => $request->cat_name,
+        'cat_des'  => $request->cat_des
+        );
+        Category::whereId($id)->update($form_data);
+        return redirect('list_category')->with('success','data is successfully updated');
     }
 
     /**

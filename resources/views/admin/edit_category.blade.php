@@ -4,9 +4,11 @@
 <div id="content">
      <div class="container-fluid"><hr>
          <div class="span12">
-           <form class="form-horizontal" method="post" action="{{ route('edit_category', $data->id) }}" name="basic_validate" id="basic_validate" novalidate="novalidate">
+           <form class="form-horizontal" method="post" action="{{ route('Category.update', $data->id) }}" name="basic_validate" id="basic_validate" novalidate="novalidate">
     @csrf
-     @method('PATCH')
+        {{ method_field('PATCH') }}
+
+
         <div class="control-group">
                 <label class="control-label" > Category Name</label>
                 <div class="controls">
