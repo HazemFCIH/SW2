@@ -120,6 +120,8 @@ public function add_category(){
      */
     public function destroy($id)
     {
-        //
+       $data = Category::findOrFail($id);
+        $data->delete();
+        return redirect('list_category')->with('success','data is successfully Deleted');
     }
 }

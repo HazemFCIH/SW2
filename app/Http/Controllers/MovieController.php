@@ -112,7 +112,35 @@ class MovieController extends Controller
      */
     public function updateM(Request $request, $id)
     {
-        //
+        $image_name = $request->hid_img_path;
+        $img_path   = $request->file('img_path');
+        if($img_path !=''){
+              $request->validate([
+            'mov_name'    => 'required',
+            'img_path'    => 'required|image|max:2048',
+            'cat_id'      => 'required',
+            'source_path' => 'required'
+
+        ]);
+                $image_name = rand().'.'.$img_path->
+            getClientOriginalExtension();
+        $img_path->move(public_path('images'),$new_name);
+            }else{
+          $request->validate([
+            'mov_name'    => 'required',
+            'cat_id'      => 'required',
+            'source_path' => 'required'
+
+        ]);
+        }
+        $form_data=array(
+            'mov_name' => $request->mov_name,
+            'img_path' => $image_name,
+            'cat_id' => $request->cat_id,
+            'source_path'=>$request->source_path
+        );
+        Movie::whereId($id)->update($form_data);
+        return redirect('list_movie')->with('success','data is successfully updated');
     }
 
     /**
@@ -123,6 +151,8 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Movie::findOrFail($id);
+        $data->delete();
+        return redirect('list_movie')->with('success','data is successfully Deleted');
     }
 }

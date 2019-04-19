@@ -64,6 +64,8 @@ Route::post('updateM','MovieController@updateM')->name("Movie.updateM");
 Route::patch('/edit_Movie/{id}', 'MovieController@updateM')->name('Movie.updateM');
 
 //Route::resource('category', 'CategoryController');
+Route::resource('Movie', 'MovieController');
+Route::resource('Category', 'CategoryController');
 
 /*Route::get('admin', functiMon () {
     return redirect('admin/dashboard');
