@@ -52,8 +52,8 @@ Route::get('/movie/{id}','MovieController@viewMovie')->name("Movie.viewMovie");
 Route::get('/admin','AdminController@dashboard');
 
 
-Route::get('storeM', 'MovieController@store')->name("Movie.storeM");
-Route::post('storeM', 'MovieController@store')->name("Movie.storeM");
+Route::get('storeM', 'MovieController@storeM')->name("Movie.storeM");
+Route::post('storeM', 'MovieController@storeM')->name("Movie.storeM");
 Route::get('store','CategoryController@store')->name("Category.store");
 Route::post('store','CategoryController@store')->name("Category.store");
 Route::get('update','CategoryController@update')->name("Category.update");

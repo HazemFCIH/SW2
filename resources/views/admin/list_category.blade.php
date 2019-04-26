@@ -1,4 +1,6 @@
-<?php use App\Http\Controllers\CategoryController;?>
+<?php use App\Http\Controllers\CategoryController;
+use App\category;
+?>
 @extends('layouts.adminlayouts.admin_design')
 @section('content')
 <div id="content">

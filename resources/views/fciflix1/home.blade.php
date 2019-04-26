@@ -1,7 +1,8 @@
 <?php
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CategoryController;
-
+use Illuminate\Support\Facades\App;
+use App\Helpers\MyFacade;
 ?>
 @include('inc.header')
 
@@ -392,8 +393,8 @@ use App\Http\Controllers\CategoryController;
 	 ?>
 					         @foreach($catdata as $row)
                         <?php 
-                         $moviedata=MovieController::listmov($row->id);
-                            
+                         //$moviedata=MovieController::listmov($row->id);
+							$moviedata=MyFacade::listmovie($row->id);
                         ?>
 		  <h3 class="agile_w3_title">{{$row->cat_name}}</h3>
 			<!--/movies-->				

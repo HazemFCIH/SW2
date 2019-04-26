@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Observers\MoiveObserver;
 use Illuminate\Http\Request;
 use App\movie;
 use DB;
@@ -78,7 +78,7 @@ class MovieController extends Controller
             'source_path'=>$request->source_path
         );
         Movie::create($form_data);
-        return redirect('add-movie')->with('success','Data Added successfully.');
+        //return redirect('add-movie')->with('success','Data Added successfully.');
     }
 
     /**
@@ -141,6 +141,7 @@ class MovieController extends Controller
         );
         Movie::whereId($id)->update($form_data);
         return redirect('list_movie')->with('success','data is successfully updated');
+
     }
 
     /**
