@@ -1,7 +1,6 @@
 <?php
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CategoryController;
-use Illuminate\Support\Facades\App;
 use App\Helpers\MyFacade;
 ?>
 @include('inc.header')
@@ -301,14 +300,16 @@ use App\Helpers\MyFacade;
 			<div class="w3_agile_latest_movies">
 			
 				<div class="owl-demo" class="owl-carousel owl-theme">
+                    @isset($new_movie)
+                        @foreach($new_moive as $row)
 					<div class="item">
 						<div class="w3l-movie-gride-agile w3l-movie-gride-slider ">
-							<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m5.jpg" title="Movies Pro" class="img-responsive" alt=" " />
+							<a href="{{ url('/movie/$row->id') }}" class="hvr-sweep-to-bottom"><img src="images/{{$row->img_path}}" title="Movies Pro" class="img-responsive" alt=" " />
 								<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="{{ url('/movie') }}">Storks	</a></h6>							
+									<h6><a href="{{ url('/movie/$row->id') }}">{{$row->mov_name}}	</a></h6>
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2016</p>
@@ -329,6 +330,8 @@ use App\Helpers\MyFacade;
 							</div>
 						</div>
 					</div>
+                        @endforeach
+                    @endisset
 					<div class="item">
 						<div class="w3l-movie-gride-agile w3l-movie-gride-slider ">
 							<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m6.jpg" title="Movies Pro" class="img-responsive" alt=" " />
