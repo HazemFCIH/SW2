@@ -54,10 +54,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::resource('/','CategoryController');
+Route::post('movie/{id}','CommentController@store');
+Route::post('rating/{id}','RatingController@store');
 
 Route::get('/movie/{id}','MovieController@viewMovie')->name("Movie.viewMovie");
 Route::get('/admin','AdminController@dashboard');
 
+
+///add/'.$movie->id
+Route::post('addmovie/{id}','HomeController@addmovie');
+//Route::post('movie/{id}','HomeController@add');
+//Route::post('movie/{id}','CommentController@store');
 
 Route::get('storeM', 'MovieController@store')->name("Movie.storeM");
 Route::post('storeM', 'MovieController@store')->name("Movie.storeM");

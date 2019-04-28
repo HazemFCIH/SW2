@@ -44,8 +44,23 @@ class HomeController extends Controller
         //$movie=movie::where('id',$id);
         //dd($watchlist);
         return view('fciflix.profile',['watchlist'=>$watchlist]);
+    }
+
+    public function addmovie(Request $request,$id) 
+    {
+
+      $movie = movie::where('id',$id)->first();
+
+      $userId =Auth::user()->id;
+      watchlist::create([
+          'movie_id'=>$id,
+          'user_id'=>$userId,
+
+      ]);
+      return back();
 
     }
+
     public function delete($id){
         $watchlist=watchlist::find($id);
         $watchlist-> delete();
