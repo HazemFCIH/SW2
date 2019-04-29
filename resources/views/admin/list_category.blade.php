@@ -1,4 +1,6 @@
-<?php use App\Http\Controllers\CategoryController;?>
+<?php use App\Http\Controllers\CategoryController;
+use App\category;
+?>
 @extends('layouts.adminlayouts.admin_design')
 @section('content')
 <div id="content">
@@ -41,6 +43,15 @@
         <td>{{$row->cat_name}}</td>
         <td>{{$row->cat_des}}</td>
         <td><a href="{{route('edit_category', $row->id)}}" class="btn btn-warning">Edit</a></td>
+         <td>
+        <form action="{{ route('Category.destroy',$row->id)}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">
+            Delete
+            </button>
+            </form>
+        </td>
         </tr>
 
         @endforeach

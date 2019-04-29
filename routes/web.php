@@ -66,8 +66,8 @@ Route::post('addmovie/{id}','HomeController@addmovie');
 //Route::post('movie/{id}','HomeController@add');
 //Route::post('movie/{id}','CommentController@store');
 
-Route::get('storeM', 'MovieController@store')->name("Movie.storeM");
-Route::post('storeM', 'MovieController@store')->name("Movie.storeM");
+Route::get('storeM', 'MovieController@storeM')->name("Movie.storeM");
+Route::post('storeM', 'MovieController@storeM')->name("Movie.storeM");
 Route::get('store','CategoryController@store')->name("Category.store");
 Route::post('store','CategoryController@store')->name("Category.store");
 Route::get('update','CategoryController@update')->name("Category.update");
@@ -78,7 +78,8 @@ Route::post('updateM','MovieController@updateM')->name("Movie.updateM");
 Route::patch('/edit_Movie/{id}', 'MovieController@updateM')->name('Movie.updateM');
 
 //Route::resource('category', 'CategoryController');
-
+Route::resource('Movie', 'MovieController');
+Route::resource('Category', 'CategoryController');
 /*Route::get('admin', functiMon () {
     return redirect('admin/dashboard');
 });*/

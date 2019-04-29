@@ -120,11 +120,11 @@ use App\Http\Controllers\CategoryController;
         				<br>
         				<input type="email" name="email" class="form-control" placeholder="Enter your email...">
                         <br> -->
-        				<textarea name="comment" class="form-control" placeholder="Enter your comment..."></textarea>	
+        				<textarea name="comment" class="form-control" placeholder="Enter your comment..."required></textarea>	
         			</div>
         			<div class="form-group text-right"></div>
         			   <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-        			   <input type="submit" name="" class="btn btn-primary">
+        			   <input type="submit" name="" class="btn btn-primary" >
         		</form>
         	</div>
         </div>
