@@ -178,6 +178,7 @@ return [
         App\Repositories\Category\CategoryRepoServiceProvide::class,
         App\Providers\MyFacadeServiceProvider::class,
         App\Providers\ObserverServiceProvider::class,
+        App\Repositories\Movie\MovieRepoServiceProvide::class,
 
     ],
 

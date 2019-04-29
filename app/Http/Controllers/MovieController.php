@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 use App\Observers\MoiveObserver;
+
+
+use App\Repositories\Movie\MovieInterface;
 use Illuminate\Http\Request;
 use App\movie;
 use DB;
 class MovieController extends Controller
 {
+
+public function  __construct(MovieInterface $Movie)
+    {
+     $this->Movie = $Movie;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -30,7 +38,9 @@ class MovieController extends Controller
         return view('admin.edit_Movie',compact('data'));
     }
    public function list_movie(){
-          $data=DB::table('movie')->get();
+
+        //$data=DB::table('movie')->get();
+       $data =$this->Movie->getAll();
         return view('admin.list_movie',compact('data'))
             ->with('i',(request()->input('page',1)-1)*5);
     }
@@ -77,7 +87,8 @@ class MovieController extends Controller
             'cat_id' => $request->cat_id,
             'source_path'=>$request->source_path
         );
-        Movie::create($form_data);
+        //Movie::create($form_data);
+        $this->Movie->create($form_data);
         //return redirect('add-movie')->with('success','Data Added successfully.');
     }
 
@@ -124,7 +135,7 @@ class MovieController extends Controller
         ]);
                 $image_name = rand().'.'.$img_path->
             getClientOriginalExtension();
-        $img_path->move(public_path('images'),$new_name);
+        $img_path->move(public_path('images'),$image_name);
             }else{
           $request->validate([
             'mov_name'    => 'required',
@@ -139,7 +150,8 @@ class MovieController extends Controller
             'cat_id' => $request->cat_id,
             'source_path'=>$request->source_path
         );
-        Movie::whereId($id)->update($form_data);
+        //Movie::whereId($id)->update($form_data);
+        $this->Movie->update($id,$form_data);
         return redirect('list_movie')->with('success','data is successfully updated');
 
     }
