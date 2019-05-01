@@ -2,6 +2,9 @@
 <?php
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminController;
+
+
 
 ?>
 <html>
@@ -83,6 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         
                         <ul class="nav navbar-nav navbar-right">
                                                     @guest
+
                             <li class="nav-item">
                               <a href="#" class="login"  data-toggle="modal" data-target="#myModal4">Login</a></li>
 									
@@ -92,6 +96,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             @endif
                         @else
                         	<li><a href="{{ route('profile') }}">Profile</a></li>
+                            @if(Auth::user()->id ==2)
+                            <li><a href="{{ route('dashboard',Auth::user()->id) }}">dashboard</a></li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

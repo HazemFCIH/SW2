@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
+
 
 ?>
 @include('inc.header')
@@ -27,6 +29,9 @@ use App\Http\Controllers\CategoryController;
 						<div class="agile_featured_movies">
 				            <div class="inner-agile-w3l-part-head">
                                 @foreach($movies as $movie)
+                                <?php
+                                $data=CommentController::listcomment($movie->id);
+                                ?>
 					            <h3 class="w3l-inner-h-title">{{$movie->mov_name}}</h3>
 								<p class="w3ls_head_para">Add short Description</p>
 							</div>
@@ -129,7 +134,23 @@ use App\Http\Controllers\CategoryController;
         	</div>
         </div>
 
+   <table class="table table-bordered table-striped">
+        <thead>
 
+        <th width="%100">
+       comments
+        </th>
+
+        </thead>
+        @foreach($data as $row)
+    <tr>
+        <td>{{$row->comment	}}</td>
+
+
+        </tr>
+
+        @endforeach
+    </table>
 	<!--/footer-bottom-->
 		<div class="contact-w3ls" id="contact">
 			<div class="footer-w3lagile-inner">

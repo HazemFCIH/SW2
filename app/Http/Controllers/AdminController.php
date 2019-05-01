@@ -4,12 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\category;
+use App\Http\Controllers\Auth\LoginController;
 
 class AdminController extends Controller
 {
-    public function dashboard(){
+    public static function dashboard($id){
+        if($id ==2){
 
-        return view('admin.dashboard');
+          return view('admin.dashboard');
+
+        }else {
+
+            return redirect('home');
+        }
+
+
 
     }
 

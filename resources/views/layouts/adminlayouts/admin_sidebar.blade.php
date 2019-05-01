@@ -20,6 +20,13 @@
 
       </ul>
     </li>
+      <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Users</span> <span class="label label-important">2</span></a>
+      <ul>
+
+        <li><a href="{{route('list_user')}}">List users</a></li>
+
+      </ul>
+    </li>
     <li><a href="tables.html"><i class="icon icon-th"></i> <span>Movies Table</span></a></li>
     <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
     <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
