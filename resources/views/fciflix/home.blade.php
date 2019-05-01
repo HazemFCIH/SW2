@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CategoryController;
+use App\Helpers\MyFacade;
 
 ?>
 @include('inc.header')
@@ -26,12 +27,12 @@ use App\Http\Controllers\CategoryController;
 										
 										     <div class="col-md-12 wthree_agile-movies_list">
 														<div class="w3l-movie-gride-agile">
-															<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m1.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+															<a href="{{  route('Movie.viewMovie', '9') }}" class="hvr-sweep-to-bottom"><img src="images/471730123.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 																<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 															</a>
 																<div class="mid-1 agileits_w3layouts_mid_1_home">
 																	<div class="w3l-movie-text">
-																		<h6><a href="{{ url('/movie') }}">Swiss Army Man	</a></h6>						
+																		<h6><a href="{{  route('Movie.viewMovie', '9') }}">THE HIDDEN WORLD	</a></h6>						
 																	</div>
 																	<div class="mid-2 agile_mid_2_home">
 																		<p>2016</p>
@@ -52,12 +53,12 @@ use App\Http\Controllers\CategoryController;
 															</div>
 													</div>
 														<div class="w3l-movie-gride-agile">
-												<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m2.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+												<a href="{{  route('Movie.viewMovie', '11') }}" class="hvr-sweep-to-bottom"><img src="images/m2.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 												</a>
 												<div class="mid-1 agileits_w3layouts_mid_1_home">
 													<div class="w3l-movie-text">
-														<h6><a href="{{ url('/movie') }}">Me Before you</a></h6>							
+														<h6><a href="{{  route('Movie.viewMovie', '11') }}">Me Before you</a></h6>							
 													</div>
 													<div class="mid-2 agile_mid_2_home">
 														<p>2016</p>
@@ -78,12 +79,12 @@ use App\Http\Controllers\CategoryController;
 												</div>
 											</div>
 												<div class="w3l-movie-gride-agile">
-												<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m3.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+												<a href="{{  route('Movie.viewMovie', '12') }}" class="hvr-sweep-to-bottom"><img src="images/m3.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 												</a>
 												<div class="mid-1 agileits_w3layouts_mid_1_home">
 													<div class="w3l-movie-text">
-														<h6><a href="{{ url('/movie') }}">Deadpool</a></h6>							
+														<h6><a href="{{  route('Movie.viewMovie', '12') }}">Deadpool</a></h6>							
 													</div>
 													<div class="mid-2 agile_mid_2_home">
 														<p>2016</p>
@@ -117,12 +118,12 @@ use App\Http\Controllers\CategoryController;
 											
 										     <div class="col-md-12 wthree_agile-movies_list">
 														<div class="w3l-movie-gride-agile">
-															<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m9.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+															<a href="{{  route('Movie.viewMovie', '13') }}" class="hvr-sweep-to-bottom"><img src="images/m9.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 																<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 															</a>
 																<div class="mid-1 agileits_w3layouts_mid_1_home">
 																	<div class="w3l-movie-text">
-																		<h6><a href="{{ url('/movie') }}">Inferno</a></h6>							
+																		<h6><a href="{{  route('Movie.viewMovie', '13') }}">Inferno</a></h6>							
 																	</div>
 																	<div class="mid-2 agile_mid_2_home">
 																		<p>2016</p>
@@ -143,12 +144,12 @@ use App\Http\Controllers\CategoryController;
 															</div>
 													</div>
 														<div class="w3l-movie-gride-agile">
-												<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m10.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+												<a href="{{  route('Movie.viewMovie', '14') }}" class="hvr-sweep-to-bottom"><img src="images/m10.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 												</a>
 												<div class="mid-1 agileits_w3layouts_mid_1_home">
 													<div class="w3l-movie-text">
-														<h6><a href="{{ url('/movie') }}">Now You See Me 2</a></h6>							
+														<h6><a href="{{  route('Movie.viewMovie', '14') }}">Now You See Me 2</a></h6>							
 													</div>
 													<div class="mid-2 agile_mid_2_home">
 														<p>2016</p>
@@ -169,12 +170,12 @@ use App\Http\Controllers\CategoryController;
 												</div>
 											</div>
 												<div class="w3l-movie-gride-agile">
-												<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m11.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+												<a href="{{  route('Movie.viewMovie', '15') }}" class="hvr-sweep-to-bottom"><img src="images/m11.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 												</a>
 												<div class="mid-1 agileits_w3layouts_mid_1_home">
 													<div class="w3l-movie-text">
-														<h6><a href="{{ url('/movie') }}">Warcraft</a></h6>							
+														<h6><a href="{{  route('Movie.viewMovie', '15') }}">Warcraft</a></h6>							
 													</div>
 													<div class="mid-2 agile_mid_2_home">
 														<p>2016</p>
@@ -206,12 +207,12 @@ use App\Http\Controllers\CategoryController;
 										<div class="w3_agile_featured_movies">
 										     <div class="col-md-12 wthree_agile-movies_list">
 														<div class="w3l-movie-gride-agile">
-															<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m1.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+															<a href="{{  route('Movie.viewMovie', '9') }}" class="hvr-sweep-to-bottom"><img src="images/471730123.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 																<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 															</a>
 																<div class="mid-1 agileits_w3layouts_mid_1_home">
 																	<div class="w3l-movie-text">
-																		<h6><a href="{{ url('/movie') }}">Swiss Army Man	</a></h6>		
+																		<h6><a href="{{  route('Movie.viewMovie', '9') }}">THE HIDDEN WORLD	</a></h6>		
 																	</div>
 																	<div class="mid-2 agile_mid_2_home">
 																		<p>2016</p>
@@ -232,12 +233,12 @@ use App\Http\Controllers\CategoryController;
 															</div>
 													</div>
 														<div class="w3l-movie-gride-agile">
-												<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m2.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+												<a href="{{  route('Movie.viewMovie', '11') }}" class="hvr-sweep-to-bottom"><img src="images/m2.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 												</a>
 												<div class="mid-1 agileits_w3layouts_mid_1_home">
 													<div class="w3l-movie-text">
-														<h6><a href="{{ url('/movie') }}">Me Before you</a></h6>							
+														<h6><a href="{{  route('Movie.viewMovie', '11') }}">Me Before you</a></h6>							
 													</div>
 													<div class="mid-2 agile_mid_2_home">
 														<p>2016</p>
@@ -258,12 +259,12 @@ use App\Http\Controllers\CategoryController;
 												</div>
 											</div>
 												<div class="w3l-movie-gride-agile">
-												<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m3.jpg" title="Movies Pro" class="img-responsive" alt=" ">
+												<a href="{{  route('Movie.viewMovie', '12') }}" class="hvr-sweep-to-bottom"><img src="images/m3.jpg" title="Movies Pro" class="img-responsive" alt=" ">
 													<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
 												</a>
 												<div class="mid-1 agileits_w3layouts_mid_1_home">
 													<div class="w3l-movie-text">
-														<h6><a href="{{ url('/movie') }}">Deadpool</a></h6>					
+														<h6><a href="{{  route('Movie.viewMovie', '12') }}">Deadpool</a></h6>					
 													</div>
 													<div class="mid-2 agile_mid_2_home">
 														<p>2016</p>
@@ -296,105 +297,15 @@ use App\Http\Controllers\CategoryController;
 					</div>
             <!--//tab-section-->	
               
-				  <h3 class="agile_w3_title"> Latest <span>Movies</span></h3>
 			<!--/movies-->				
-			<div class="w3_agile_latest_movies">
-			
-				<div class="owl-demo" class="owl-carousel owl-theme">
-					<div class="item">
-						<div class="w3l-movie-gride-agile w3l-movie-gride-slider ">
-							<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m5.jpg" title="Movies Pro" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="{{ url('/movie') }}">Storks	</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben one">
-								<p>NEW</p>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w3l-movie-gride-agile w3l-movie-gride-slider ">
-							<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m6.jpg" title="Movies Pro" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="{{ url('/movie') }}">Hopeless</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben one">
-								<p>NEW</p>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="w3l-movie-gride-agile w3l-movie-gride-slider ">
-							<a href="{{ url('/movie') }}" class="hvr-sweep-to-bottom"><img src="images/m7.jpg" title="Movies Pro" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="{{ url('/movie') }}">Mechanic</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben one">
-								<p>NEW</p>
-							</div>
-						</div>
-					</div>
-					
-					   </div>
-				    </div>
+	
                         <?php 
                        		 $catdata=CategoryController::index()		
 	 ?>
 					         @foreach($catdata as $row)
                         <?php 
-                         $moviedata=MovieController::listmov($row->id);
-                            
+                        // $moviedata=MovieController::listmov($row->id);
+                           $moviedata=MyFacade::listmovie($row->id); 
                         ?>
 		  <h3 class="agile_w3_title">{{$row->cat_name}}</h3>
 			<!--/movies-->				
@@ -409,7 +320,7 @@ use App\Http\Controllers\CategoryController;
 							</a>
 							<div class="mid-1 agileits_w3layouts_mid_1_home">
 								<div class="w3l-movie-text">
-									<h6><a href="{{ url('/movie') }}">{{$rowm->mov_name}}</a></h6>							
+									<h6><a href="{{  route('Movie.viewMovie',$rowm->id) }}">{{$rowm->mov_name}}</a></h6>							
 								</div>
 								<div class="mid-2 agile_mid_2_home">
 									<p>2016</p>

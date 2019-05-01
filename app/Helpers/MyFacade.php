@@ -14,7 +14,7 @@ class MyFacade {
 
     public static function listmovie($id)
     {
-$movies = DB::table('movie')->where('cat_id', '=',$id)->get();
+		$movies = DB::table('movie')->where('cat_id', '=',$id)->get();
         return $movies;
 
     }
