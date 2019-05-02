@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\rating1;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use DB;
 use App\movie;
 class RatingController extends Controller
 {
@@ -20,6 +20,11 @@ class RatingController extends Controller
     ]);
     return back();
 	}
+     public static function getrate($id){
+        $data = DB::table('rating')->where('movie_id', '=',$id)->avg('rating');
+         return $data;
+    }
+
 }
 /*public function add($id)
 

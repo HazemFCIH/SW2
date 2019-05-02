@@ -355,18 +355,18 @@ use App\Helpers\MyFacade;
 			<div class="footer-w3lagile-inner">
 					<h3 class="text-center follow">Connect <span>Us</span></h3>
 						<ul class="social-icons1 agileinfo">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="https://www.facebook.com/netflixmiddleeastnorthafrica/?ref=br_rs"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/netflix?lang=ar"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/netflix"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.youtube.com/user/NewOnNetflix/videos?app=desktop"><i class="fa fa-youtube"></i></a></li>
+
 						</ul>	
 					
 			 </div>
 						
 			</div>
 			<div class="w3agile_footer_copy">
-				    <p>© 2017 Movies Pro. All rights reserved</p>
+				    <p>© 2019 FciFlix All rights reserved</p>
 			</div>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 

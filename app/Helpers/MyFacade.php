@@ -10,6 +10,9 @@ use App\movie;
 
 class MyFacade {
 
+ private function __construct() {
+
+ }
 
 
     public static function listmovie($id)
